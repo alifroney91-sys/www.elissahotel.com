@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Elissa Perlis</title>
+    <title>Hotel Elissa Perlis | Penginapan Selesa di Perlis</title>
     <style>
         * {
             margin: 0;
@@ -13,81 +13,166 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                        url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.6);
+            background: linear-gradient(to right, #ff6600, #ff3300);
+            color: white;
             padding: 20px 0;
+            text-align: center;
         }
 
         header h1 {
-            font-size: 2.8em;
-            color: #ffb703;
+            font-size: 2.2em;
             letter-spacing: 1px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        nav {
+            background-color: #003366;
+            text-align: center;
+            padding: 10px 0;
         }
 
-        h2 {
-            color: #ffb703;
-            margin-bottom: 15px;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        a.btn {
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 30px;
+        nav a {
             color: white;
+            margin: 0 15px;
+            text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        .btn-booking { background: #0071c2; }
-        .btn-agoda { background: #6c63ff; }
-        .btn-trip { background: #ff5722; }
+        nav a:hover {
+            color: #ffcc00;
+        }
 
-        a.btn:hover {
-            opacity: 0.8;
+        .hero {
+            background: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            font-size: 2em;
+            flex-direction: column;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .section {
+            padding: 60px 10%;
+        }
+
+        .about {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+
+        .about h2 {
+            color: #ff3300;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .facilities, .gallery {
+            margin-top: 40px;
+        }
+
+        .facilities h2, .gallery h2, .booking h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 25px;
+        }
+
+        .facility-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .facility-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .facility-item:hover {
             transform: scale(1.05);
         }
 
-        footer {
-            margin-top: 60px;
-            padding: 15px 0;
-            background: rgba(0,0,0,0.7);
-            color: #ccc;
-            font-size: 14px;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
 
-        @media(max-width:600px){
-            header h1 { font-size: 2em; }
-            p { font-size: 16px; }
+        .gallery-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .booking {
+            background-color: #f2f6ff;
+            text-align: center;
+            padding: 60px 10%;
+            border-radius: 10px;
+        }
+
+        .booking a {
+            display: inline-block;
+            margin: 10px;
+            background: #ff6600;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .booking a:hover {
+            background: #ff3300;
+        }
+
+        .map {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            height: 400px;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media(max-width:768px) {
+            .hero {
+                font-size: 1.5em;
+                text-align: center;
+                padding: 0 20px;
+            }
         }
     </style>
 </head>
@@ -95,42 +180,81 @@
 
     <header>
         <h1>Hotel Elissa Perlis</h1>
-        <p>Penginapan selesa dan moden di tengah bandar Kangar, Perlis</p>
+        <p>Penginapan Selesa & Mewah di Tengah Bandar Kangar</p>
     </header>
 
-    <div class="container">
+    <nav>
+        <a href="#about">Tentang</a>
+        <a href="#facilities">Kemudahan</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#booking">Tempahan</a>
+        <a href="#map">Lokasi</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Selamat Datang ke Hotel Elissa</h2>
+        <p>Rasai keselesaan dan layanan terbaik di negeri Perlis</p>
+    </section>
+
+    <section class="section about" id="about">
         <h2>Tentang Hotel Elissa</h2>
         <p>
-            Hotel Elissa Perlis menawarkan keselesaan dengan bilik berhawa dingin, Wi-Fi percuma, dan kemudahan moden.
-            Terletak berhampiran tarikan utama seperti Masjid Al-Hussain Kuala Perlis dan Padang Besar, hotel ini sesuai
-            untuk pelancong dan keluarga.
+            Hotel Elissa Perlis merupakan destinasi penginapan moden yang menawarkan suasana damai, selesa, dan eksklusif di tengah-tengah bandar Kangar. 
+            Dengan bilik yang luas dan dilengkapi fasiliti moden, hotel ini sesuai untuk pelancong, keluarga, serta mereka yang hadir atas urusan kerja.
         </p>
-
-        <h2>Kemudahan Hotel</h2>
         <p>
-            ??? Bilik berhawa dingin <br>
-            ?? Wi-Fi percuma <br>
-            ?? Tempat letak kereta percuma <br>
-            ? Kafe & restoran <br>
-            ??? Berhampiran pusat bandar Kangar<br>
-            04-977 5555<br>
-            012-399 5545<br>
-            elissahotelandsuites@gmail.com<br>
-            No. 5, Jalan Tuanku Syed Putra, Kangar, Malaysia<br>
+            Setiap bilik dilengkapi penghawa dingin, Wi-Fi percuma, televisyen pintar, bilik mandi moden, serta pemandangan indah sekitar bandar Perlis. 
+            Lokasi hotel yang strategik memudahkan akses ke tempat menarik seperti Padang Besar, Gua Kelam, dan Bukit Ayer.
         </p>
+    </section>
 
-        <h2>Tempah Sekarang</h2>
-        <p>Klik salah satu platform di bawah untuk membuat tempahan anda:</p>
-
-        <div class="btn-group">
-            <a href="https://www.facebook.com/p/Elissa-Hotel-Suites-61575316786178/" target="_blank" class="btn btn-booking">Tempah di facebook.com</a>
-            <a href="https://www.agoda.com/en-sg/elissa-hotel-suites/hotel/padang-tengku-my.html" target="_blank" class="btn btn-agoda">Tempah di Agoda</a>
-            <a href="https://www.tiktok.com/@elissahotelandsuites/video/7499009606572625160" target="_blank" class="btn btn-trip">Tempah di tiktok</a>
+    <section class="section facilities" id="facilities">
+        <h2>Kemudahan Hotel</h2>
+        <div class="facility-list">
+            <div class="facility-item">????? Kolam Renang</div>
+            <div class="facility-item">??? Restoran & Kafe</div>
+            <div class="facility-item">?? Tempat Letak Kereta Percuma</div>
+            <div class="facility-item">?? Wi-Fi Berkelajuan Tinggi</div>
+            <div class="facility-item">??? Bilik Mewah & Bersih</div>
+            <div class="facility-item">?? Kaunter 24 Jam</div>
         </div>
-    </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+        <h2>Galeri Hotel Elissa</h2>
+        <div class="gallery-grid">
+            <img src="https://pix8.agoda.net/hotelImages/74516154/0/6abb2ef9d632ea3eb878b4b83cce7aa7.jpg?ce=2&s=1024x" alt="Bilik Hotel Elissa">
+            <img src="https://pix8.agoda.net/hotelImages/74516154/1187846670/f40de1db78789951c45c2a4726efadbc.png?ce=2&s=1024x" alt="Lobi Hotel Elissa">
+            <img src="https://pix8.agoda.net/hotelImages/74516154/0/6687f364132b7604f1d946b628cc1700.png?ce=2&s=1024x" alt="Kolam Renang Hotel Elissa">
+            <img src="https://pix8.agoda.net/hotelImages/74516154/0/4a10257c1fca96a9dbb7d9ae7c532be7.jpg?ce=2&s=1024x" alt="Restoran Hotel Elissa">
+<img src="https://pix8.agoda.net/hotelImages/74516154/1187846669/a2ef0e187fcf66bd01cf342aba9aff7c.jpg?ce=2&s=1024x" alt="Restoran Hotel Elissa">
+<img src="https://pix8.agoda.net/hotelImages/74516154/1187846669/d52d99b1f7990125c54993681d874d18.jpg?ce=2&s=1024x" alt="Restoran Hotel Elissa">
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <h2>Tempah Sekarang</h2>
+        <p>Pilih platform tempahan kegemaran anda untuk menempah bilik di Hotel Elissa:</p>
+        <a href="https://www.facebook.com/p/Elissa-Hotel-Suites-61575316786178/" target="_blank">Facebook.com</a>
+        <a href="https://www.agoda.com/ms-my/elissa-hotel-suites/hotel/padang-tengku-my.html?countryId=198&finalPriceView=1&isShowMobileAppPrice=false&cid=1917614&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-11-6&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=MYR&isFreeOccSearch=false&tspTypes=-1&los=1&searchrequestid=9ecdd1a2-158b-4df4-b0db-1e66ce9685bb&ds=bpmzxCU4ysaSFYxs" target="_blank">Agoda</a>
+        <a href="https://www.skyscanner.com.my/hotels/malaysia/taman-bukit-kaya-hotel/elissa-hotel-%26-suites/ht-224594831?checkin=2025-11-06&checkout=2025-11-07&rooms=1&adults=2&clicked_details_price=299&correlation_id=dcdb98ff-64af-4475-998f-f68ccc4fadfa&currency=MYR&impression_id=673729d3-3c03-47d2-9acd-f1dc9e46fa98&locale=ms-MY&market=MY&priceType=price-per-night&search_cycle_id=074714072034641c8a8d9a09f8158e77&search_entity_id=224594831&source=GoogleHpa" target="_blank">Skyscanner</a>
+        <a href="https://au.trip.com/hotels/kangar-hotel-detail-130172198/elissa-hotel-suites/" target="_blank">Trip.com</a>
+    </section>
+
+    <section class="section map" id="map">
+        <h2>Lokasi Hotel Elissa</h2>
+        <p>Alamat: No.5, Jalan Raja Syed Alwi, 01000 Kangar, Perlis, Malaysia</p>
+<p>04-977 5555</p>
+<p>012-399 5545</p>
+<p>Delissahotelandsuites@gmail.com</p>
+        <iframe 
+            src="https://www.google.com/maps?q=Hotel+Elissa+Perlis&output=embed"
+            allowfullscreen="">
+        </iframe>
+    </section>
 
     <footer>
-        <p>© 2025 Hotel Elissa Perlis | </p>
+        &copy; 2025 Hotel Elissa Perlis 
     </footer>
 
 </body>
