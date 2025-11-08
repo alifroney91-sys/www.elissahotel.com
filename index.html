@@ -217,7 +217,91 @@
             .section {
                 padding: 50px 5%;
             }
-        }
+        .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 100;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-icon {
+      margin-top: 15px;
+    }
+
+    /* Chat Popup Box */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 280px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 99;
+      overflow: hidden;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .chat-header {
+      background: #25D366;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .chat-body {
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .chat-body p {
+      margin: 0 0 10px;
+    }
+
+    .chat-button {
+      display: block;
+      background: #25D366;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .chat-button:hover {
+      background: #1EBE5D;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 18px;
+    }
     </style>
 </head>
 <body>
@@ -274,16 +358,32 @@
             <img src="https://pix8.agoda.net/hotelImages/74516154/0/4a10257c1fca96a9dbb7d9ae7c532be7.jpg?ce=2&s=1024x" alt="Restoran Hotel Elissa">
 <img src="https://pix8.agoda.net/hotelImages/74516154/1187846669/a2ef0e187fcf66bd01cf342aba9aff7c.jpg?ce=2&s=1024x" alt="Restoran Hotel Elissa">
 <img src="https://pix8.agoda.net/hotelImages/74516154/1187846669/d52d99b1f7990125c54993681d874d18.jpg?ce=2&s=1024x" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762574022/dW5uYW1lZF8xX3ZiMzMxbA==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762580329/dW5uYW1lZF8yX25jb2kxMg==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762580535/dW5uYW1lZF8zX2JxZXh4aw==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762580624/dW5uYW1lZF80X2l5enh6bg==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762580783/dW5uYW1lZF81X294dHh1Mw==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762581581/dW5uYW1lZF82X3FzdnFwdA==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762581654/dW5uYW1lZF83X3JuZjRpZw==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762581797/dW5uYW1lZF84X2psYzlqdQ==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762581966/dW5uYW1lZF85X3JydHFpdA==/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762582123/dW5uYW1lZF8xMF9xZWx4YXY=/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762582229/dW5uYW1lZF8xMl92ZWpwdGY=/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762582303/dW5uYW1lZF8xM19ta2lqb3A=/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762582372/dW5uYW1lZF8xMV9scHByc3M=/drilldown" alt="Restoran Hotel Elissa">
+<img src="https://res-console.cloudinary.com/dt4koyd7n/thumbnails/v1/image/upload/v1762582546/dW5uYW1lZF93bmltbWU=/drilldown" alt="Restoran Hotel Elissa">
+
         </div>
     </section>
 
     <section class="booking" id="booking">
         <h2>Tempah Sekarang</h2>
         <p>Pilih platform tempahan kegemaran anda untuk menempah bilik di Hotel Elissa:</p>
+        <a href="https://wa.me/0123995545?text=Halo%20sy%20nk%20booking%2C%20bilik%20hotel%20elissa!" target="_blank">WhatsApp</a>
         <a href="https://www.facebook.com/p/Elissa-Hotel-Suites-61575316786178/" target="_blank">Facebook.com</a>
-        <a href="https://www.agoda.com/ms-my/elissa-hotel-suites/hotel/padang-tengku-my.html?countryId=198&finalPriceView=1&isShowMobileAppPrice=false&cid=1917614&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-11-6&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=MYR&isFreeOccSearch=false&tspTypes=-1&los=1&searchrequestid=9ecdd1a2-158b-4df4-b0db-1e66ce9685bb&ds=bpmzxCU4ysaSFYxs" target="_blank">Agoda</a>
+        <a href="https://www.agoda.com/ms-my/elissa-hotel-suites/hotel/padang-tengku-my.html?cid=alifroney91@gmail.com" target="_blank">Agoda</a>
         <a href="https://www.skyscanner.com.my/hotels/malaysia/taman-bukit-kaya-hotel/elissa-hotel-%26-suites/ht-224594831?checkin=2025-11-06&checkout=2025-11-07&rooms=1&adults=2&clicked_details_price=299&correlation_id=dcdb98ff-64af-4475-998f-f68ccc4fadfa&currency=MYR&impression_id=673729d3-3c03-47d2-9acd-f1dc9e46fa98&locale=ms-MY&market=MY&priceType=price-per-night&search_cycle_id=074714072034641c8a8d9a09f8158e77&search_entity_id=224594831&source=GoogleHpa" target="_blank">Skyscanner</a>
-        <a href="https://au.trip.com/hotels/kangar-hotel-detail-130172198/elissa-hotel-suites/" target="_blank">Trip.com</a>
+        <a href="https://au.trip.com/hotels/kangar-hotel-detail-130172198/elissa-hotel-suites/?allianceid=alifroney91@gmail.com&sid=alifroney91@gmail.com" target="_blank">Trip.com</a>
     </section>
 
     <section class="section map" id="map">
@@ -294,13 +394,14 @@
 <p>Delissahotelandsuites@gmail.com</p>
         <iframe 
             src="https://www.google.com/maps?q=Hotel+Elissa+Perlis&output=embed"
-            allowfullscreen="">
+            allowfullscreen="full">
         </iframe>
     </section>
 
     <footer>
         &copy; 2025 Hotel Elissa Perlis 
     </footer>
+             
 
 </body>
 </html>
